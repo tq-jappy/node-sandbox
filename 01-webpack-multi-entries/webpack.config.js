@@ -8,10 +8,7 @@ module.exports = {
   context: path.join(basePath, 'src'),
   entry: {
     app: './js/students.js',
-    welcome: './js/welcome.js',
-    vendor: [
-      'jquery',
-    ],
+    welcome: './js/welcome.js'
   },
   output: {
     path: path.join(basePath, 'dist'),
@@ -50,11 +47,7 @@ module.exports = {
       template: 'page2.html',
       inject: false,
       hash: true,
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
+    })
     /*
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
