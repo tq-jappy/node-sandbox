@@ -7,10 +7,14 @@
     "node": ">= 8.9.0 < 9"
   },
   "scripts": {
-    "build:01": "npx webpack --config 01-webpack-multi-entries/webpack.config.js",
-    "watch:01": "npx webpack --config 01-webpack-multi-entries/webpack.config.js -w",
-    "start:01": "npx webpack-dev-server --config 01-webpack-multi-entries/webpack.config.js",
+    "build:01": "webpack --config 01-webpack-multi-entries/webpack.config.js",
+    "watch:01": "webpack --config 01-webpack-multi-entries/webpack.config.js -w",
+    "start:01": "webpack-dev-server --config 01-webpack-multi-entries/webpack.config.js",
     "clean:01": "rimraf 01-webpack-multi-entries/dist",
+    "build:02": "webpack --config 02-rxjs/webpack.config.js",
+    "watch:02": "webpack --config 02-rxjs/webpack.config.js -w",
+    "start:02": "webpack-dev-server --config 02-rxjs/webpack.config.js",
+    "clean:01": "rimraf 02-rxjs/dist",
     "__test": "npx mocha"
   },
   "repository": {
@@ -23,7 +27,9 @@
     "url": "https://github.com/tq-jappy/node-sandbox/issues"
   },
   "homepage": "https://github.com/tq-jappy/node-sandbox#readme",
-  "dependencies": {},
+  "dependencies": {
+    "rxjs": "5.5.6"
+  },
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
